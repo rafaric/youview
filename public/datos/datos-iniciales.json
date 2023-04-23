@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "categoria": "Front-End",
+      "clave": "Fzv-rgwcFKk",
+      "url": "https://www.youtube.com/embed/Fzv-rgwcFKk"
+    },
+    {
+      "id": 3,
+      "categoria": "Front-End",
+      "clave": "Fzv-rgwcFKk",
+      "url": "https://www.youtube.com/embed/Fzv-rgwcFKk"
+    },
+    {
+      "id": 2,
+      "categoria": "Back-End",
+      "clave": "Fzv-rgwcFKk",
+      "url": "https://www.youtube.com/embed/Fzv-rgwcFKk"
+    }
+  ],
+  "categorias": [
+    { "nombre": "Front-End", "color": "#6BD1FF" },
+    { "nombre": "Back-End", "color": "#00C86F" },
+    { "nombre": "Git", "color": "#FFBA05" },
+    { "nombre": "UX-UI", "color": "#DC6EBE" },
+    { "nombre": "Soft Skills", "color": "#6B5BE2" }
+  ]
+}

@@ -1,36 +1,50 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import VideoCard from "../VideoCard/VideoCard";
 import Slider from "react-slick";
 
-const Slid = () => {
+const Slid = ({ datos, categoria }) => {
+  const [datosfiltrados, setDatosfiltrados] = useState([]);
+
+  useEffect(() => {
+    setDatosfiltrados(datos.filter((dato) => dato.categoria === categoria));
+  }, []);
+
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+    ],
   };
+
   return (
-    <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
+    <>
+      <Slider {...settings}>
+        {datosfiltrados.map((data) => (
+          <VideoCard dato={data} />
+        ))}
+      </Slider>
+    </>
   );
 };
 

@@ -79,7 +79,7 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   border: 0;
   font-size: 100%;
@@ -88,19 +88,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
+
 
 body {
   line-height: 1;
