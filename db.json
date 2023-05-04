@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "titulo": "7 cosas que debes saber para ser programador frontend este 2023",
+      "categoria": "Front-End",
+      "limagen": "https://img.youtube.com/vi/q0UgClC8md4/hqdefault.jpg",
+      "lvideo": "https://www.youtube.com/watch?v=q0UgClC8md4",
+      "descripcion": "Hola Nicolas, en estos días he tenido una charla profunda con mi yo interior y a mis 63 años ya estoy pensando en que voy hacer al pensionarme, pero nooooo me voy a quedar quieto eso nunca. Tengo un hijo Ing. Electrónico y hoy hablando de mi charla interna hemos decidido que me convertiré en PROGRAMADOR frontend, para e",
+      "usuario": "rafaric",
+      "id": 2
+    },
+    {
+      "titulo": "DirectvGo",
+      "categoria": "Back-End",
+      "limagen": "https://img.youtube.com/vi/Fzv-rgwcFKk/hqdefault.jpg",
+      "lvideo": "https://www.youtube.com/watch?v=Fzv-rgwcFKk",
+      "descripcion": "Se trabaja con distintos merenderos de la ciudad, no sólo ayudando en la proporción de alimentos sino también generando talleres que se conviertan en espacios recreativos, educativos y de acompañamiento espiritual para las infancias.  Finalidad: de que por intermedio de ellos, se pueda incluir al grupo familiar al proyecto.",
+      "usuario": "rafaric",
+      "id": 3
+    },
+    {
+      "titulo": "From Design to Code // HTML & CSS from scratch // Frontend Mentor",
+      "limagen": "https://img.youtube.com/vi/KqFAs5d3Yl8/hqdefault.jpg",
+      "lvideo": "https://www.youtube.com/watch?v=KqFAs5d3Yl8",
+      "descripcion": "Taking on a Frontend Mentor challenge to explore how I go from design to code, including breaking down some of my thought processes along the way. This project is a fun exploration of flexbox, grid, custom properties, and variable fonts, to name a few things.",
+      "usuario": "rafaric",
+      "id": 4
+    },
+    {
+      "titulo": "Proyecto Frontend HTML, CSS y JavaScript desde cero",
+      "limagen": "https://img.youtube.com/vi/O7i2M6FNcj8/hqdefault.jpg",
+      "lvideo": "https://www.youtube.com/watch?v=O7i2M6FNcj8",
+      "descripcion": "Aprovecha el DESCUENTO de Hostinger: https://hostinger.com/juanwmedia 👉 Usa el código \"JUANWMEDIA\" para un descuento EXTRA.  👉 Código finalizado: https://replit.com/@Wmedia/Frontend-P...  Si estás estudiando desarrollo Web Frontend nada mejor para practicar HTML, CSS y JavaScript que programar desde cero un pequeño proyecto. Vamos allá.",
+      "usuario": "rafaric",
+      "categoria": "Front-End",
+      "id": 6
+    },
+    {
+      "titulo": "FRONT-END EN 5 PASOS - ¿Que aprender y por donde empezar para ser Desarrollador Web Frontend? *2023*",
+      "limagen": "https://img.youtube.com/vi/SDMpGO1_qU0/hqdefault.jpg",
+      "lvideo": "https://www.youtube.com/watch?v=SDMpGO1_qU0",
+      "descripcion": "prende CSS, Responsive, SASS, Flexbox, Grid y Bootstrap 👉 https://victorroblesweb.es/master-css\n💡 Aprende JavaScript, jQuery, Angular, NodeJS y mucho más aquí: https://victorroblesweb.es/master-jav...\n\n🔥",
+      "categoria": "Front-End",
+      "usuario": "rafaric",
+      "id": 7
+    },
+    {
+      "titulo": "Ruta para ser programador FRONTEND",
+      "limagen": "https://www.youtube.com/watch?v=lCGoeEF8T_I",
+      "lvideo": "https://www.youtube.com/watch?v=lCGoeEF8T_I",
+      "descripcion": "Todas las tecnologías frontend que hay que aprender  para ser un programador web, desarrollador web o ingeniero de software frontend en el año 2022. Puedes enfocarte en frontend, backed, fullstack o devops y este video se enfoca en FRONTEND. 💻 También recomiendo las librerías y frameworks más populares de Javascript en esta ruta para de aprendizaje de programación web.",
+      "categoria": "Front-End",
+      "usuario": "rafaric",
+      "id": 8
+    }
+  ],
+  "categorias": [
+    {
+      "nombre": "Front-End",
+      "color": "#6BD1FF"
+    },
+    {
+      "nombre": "Back-End",
+      "color": "#00C86F"
+    },
+    {
+      "nombre": "Git",
+      "color": "#FFBA05"
+    },
+    {
+      "nombre": "UX-UI",
+      "color": "#DC6EBE"
+    },
+    {
+      "nombre": "Soft Skills",
+      "color": "#6B5BE2"
+    }
+  ]
+}

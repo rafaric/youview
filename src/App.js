@@ -1,51 +1,36 @@
-import { useEffect, useState } from "react";
-import Campo from "./components/Campo/Campo";
-import Layout from "./components/Layout/Layout";
-import Banner from "./components/Banner/Banner";
-import "./reset.css";
-import Carrusel from "./components/Carousel/Carrusel/Carrusel";
-import Button from "./components/Button/Button";
+// import "./reset.css";
+import GlobalStyle from "./Global";
+import Home from "./components/Home/Home";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Video from "./pages/Registro/Video/Video";
+import Categoria from "./pages/Registro/Categoria/Categoria";
+import { VideoContextProvider } from "./Contexts/VideoContexts";
+import { register } from "swiper/element/bundle";
+
+register();
 
 function App() {
-  const [datos, setDatos] = useState([]);
-  const [categorias, setCategorias] = useState([]);
-  const [vistaVideo, setVistaVideo] = useState(false);
-
-  useEffect(() => {
-    fetch("/datos/datos-iniciales.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setDatos(data.data);
-        setCategorias(data.categorias);
-      });
-  }, []);
-
-  const handleVistaVideo = () => {
-    setVistaVideo(true);
-  };
-
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/newvideo",
+      element: <Video />,
+    },
+    {
+      path: "/newcat",
+      element: <Categoria />,
+    },
+  ]);
   return (
-    <div className="App">
-      <Layout>
-        {!vistaVideo && (
-          <>
-            <Banner clave="JPlVb3t6kx8" />
-            <Carrusel datos={datos} categorias={categorias} />
-            <Button texto={"Nuevo Video"} onClick={handleVistaVideo} />
-          </>
-        )}
-        {vistaVideo && (
-          <form>
-            <Campo />
-          </form>
-        )}
-      </Layout>
-    </div>
+    <VideoContextProvider>
+      <div className="App">
+        <GlobalStyle />
+        <RouterProvider router={router} />
+      </div>
+    </VideoContextProvider>
   );
 }
 

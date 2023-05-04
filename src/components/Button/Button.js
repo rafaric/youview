@@ -1,25 +1,67 @@
 import styled from "styled-components";
 import "./Button.css";
 import React from "react";
+import { Link } from "react-router-dom";
 
-const BotonBlue = styled.button`
-  width: 100%;
+const Boton = styled.button`
+  background-color: ${(props) => props.color};
+  color: white;
+  border-radius: 10px;
+  width: ${(props) => (props.size === "long" ? "100%" : "50%")};
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 `;
-const BotonGray = styled.button`
+const Botongray = styled(Boton)`
   position: absolute;
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ccc;
+  background-color: gray;
   color: black;
-  border-radius: 10px;
+  :hover {
+    background-color: #555;
+  }
 `;
 
-const Button = ({ texto, estilo, onClick }) => {
-  if (estilo === "gray") {
-    return <BotonGray>{texto}</BotonGray>;
-  } else {
-    return <BotonBlue onClick={onClick}>{texto}</BotonBlue>;
+const Button = ({
+  texto,
+  estilo,
+  onclick,
+  color,
+  type = "",
+  onsubmit = "",
+}) => {
+  console.log(onclick);
+  switch (estilo) {
+    case "gray":
+      return (
+        <Botongray type={type}>
+          {onclick !== "" ? (
+            <a href={onclick} target="__blank">
+              {texto}
+            </a>
+          ) : (
+            texto
+          )}
+        </Botongray>
+      );
+    case "blue-short":
+      return (
+        <Boton color="blue" size="short" type={type} onSubmit={onsubmit}>
+          {onclick !== "" ? <Link to={onclick}>{texto}</Link> : texto}
+        </Boton>
+      );
+    case "blue-long":
+      return (
+        <Boton color="blue" size="long" type={type} onSubmit={onsubmit}>
+          {onclick !== "" ? <Link to={onclick}>{texto}</Link> : texto}
+        </Boton>
+      );
+    default:
+      <Boton>{texto}</Boton>;
   }
 };
 

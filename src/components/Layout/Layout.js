@@ -1,14 +1,26 @@
 import React from "react";
 import Header from "../Header/Header";
 import styled from "styled-components";
+import { Container } from "@mui/material";
+import Footer from "../Footer/Footer";
+import { useLocation } from "react-router-dom";
 
-const Contenedor = styled.section``;
+const SectionContenedor = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  marging: 0;
+  width: 100vw;
+`;
 
 const Layout = ({ children }) => {
+  const direccion = useLocation();
   return (
     <>
       <Header />
-      <Contenedor>{children}</Contenedor>
+      <SectionContenedor>{children}</SectionContenedor>
+      {direccion.pathname === "/" || <Footer />}
     </>
   );
 };
