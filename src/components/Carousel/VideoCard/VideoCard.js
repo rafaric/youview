@@ -1,10 +1,12 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import styled from "styled-components";
+import "./VideoCard.css";
 
 const Video = styled.div`
   position: relative;
   width: 100%;
+  border-radius: 10px;
   :hover {
     transform: scale(1.08);
     transition: 0.5s;
@@ -25,7 +27,12 @@ const VideoCard = ({ dato, image }) => {
         allowFullScreen
       ></iframe> */}
       {/* <video width="100%" src={dato} controls muted></video> */}
-      <ReactPlayer width="100%" url={dato} light={image} />
+      <ReactPlayer
+        style={{ borderRadius: "10px" }}
+        width="100%"
+        url={dato}
+        light={image}
+      />
     </Video>
   );
 };

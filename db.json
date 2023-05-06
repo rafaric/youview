@@ -46,34 +46,55 @@
     },
     {
       "titulo": "Ruta para ser programador FRONTEND",
-      "limagen": "https://www.youtube.com/watch?v=lCGoeEF8T_I",
+      "limagen": "https://img.youtube.com/vi/lCGoeEF8T_I/hqdefault.jpg",
       "lvideo": "https://www.youtube.com/watch?v=lCGoeEF8T_I",
       "descripcion": "Todas las tecnologías frontend que hay que aprender  para ser un programador web, desarrollador web o ingeniero de software frontend en el año 2022. Puedes enfocarte en frontend, backed, fullstack o devops y este video se enfoca en FRONTEND. 💻 También recomiendo las librerías y frameworks más populares de Javascript en esta ruta para de aprendizaje de programación web.",
       "categoria": "Front-End",
       "usuario": "rafaric",
       "id": 8
+    },
+    {
+      "titulo": "¿Qué es Git y GitHub? - Repositorios, ramas y mucho más",
+      "limagen": "https://img.youtube.com/vi/DinilgacaWs/hqdefault.jpg",
+      "lvideo": "https://www.youtube.com/watch?v=DinilgacaWs",
+      "descripcion": "Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente. En su lugar GitHub es una forja para alojar proyectos utilizando el sistema de control de versiones Git. GitHub sería la red social de código para los programadores, tu propio curriculum vitae.\n\nEn esta clase el profesor Freddy Vega nos enseña para qué sirve Git, cómo usarlo, cómo mejora nuestra productividad y cómo sacarle el mayor provecho.",
+      "categoria": "Git",
+      "usuario": "rafaric",
+      "id": 9
     }
   ],
   "categorias": [
     {
       "nombre": "Front-End",
-      "color": "#6BD1FF"
+      "color": "#6BD1FF",
+      "id": 1
     },
     {
       "nombre": "Back-End",
-      "color": "#00C86F"
+      "color": "#00C86F",
+      "id": 2
     },
     {
       "nombre": "Git",
-      "color": "#FFBA05"
+      "color": "#FFBA05",
+      "id": 3
     },
     {
       "nombre": "UX-UI",
-      "color": "#DC6EBE"
+      "color": "#DC6EBE",
+      "id": 4
     },
     {
       "nombre": "Soft Skills",
-      "color": "#6B5BE2"
+      "color": "#6B5BE2",
+      "id": 5
+    },
+    {
+      "nombre": "Chat Gpt",
+      "color": "#103d15",
+      "descripcion": "nzkdkfknndhbd",
+      "usuario": "rafaric",
+      "id": 6
     }
   ]
 }

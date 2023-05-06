@@ -16,7 +16,7 @@ const Boton = styled.button`
 `;
 const Botongray = styled(Boton)`
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   background-color: gray;
@@ -30,15 +30,14 @@ const Button = ({
   texto,
   estilo,
   onclick,
-  color,
+  color = "blue",
   type = "",
-  onsubmit = "",
+  onsubmit,
 }) => {
-  console.log(onclick);
   switch (estilo) {
     case "gray":
       return (
-        <Botongray type={type}>
+        <Botongray type={type} color={color}>
           {onclick !== "" ? (
             <a href={onclick} target="__blank">
               {texto}
@@ -50,8 +49,8 @@ const Button = ({
       );
     case "blue-short":
       return (
-        <Boton color="blue" size="short" type={type} onSubmit={onsubmit}>
-          {onclick !== "" ? <Link to={onclick}>{texto}</Link> : texto}
+        <Boton color={color} size="short" type={type} onSubmit={onsubmit}>
+          {onclick ? <Link to={onclick}>{texto}</Link> : texto}
         </Boton>
       );
     case "blue-long":

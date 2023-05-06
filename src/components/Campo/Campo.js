@@ -19,9 +19,9 @@ const Campo = ({
   valor,
   actualizavalor,
   categorias,
+  type,
 }) => {
   const manejarCambio = (e) => {
-    console.log(e.target.value, "-", e.target.name);
     actualizavalor(e.target.value, e.target.name);
   };
 
@@ -29,6 +29,8 @@ const Campo = ({
     <Stack direction="column" alignItems="stretch">
       {id !== "categoria" ? (
         <TextField
+          id={id}
+          type={type}
           name={id}
           label={label}
           variant="outlined"

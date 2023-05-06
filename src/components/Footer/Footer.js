@@ -12,7 +12,7 @@ const Pie = styled.footer`
   text-align: center;
   padding: 1rem 1rem;
   @media (min-width: 768px) {
-    width: 100%;
+    width: 95%;
   }
 `;
 const Footer = () => {

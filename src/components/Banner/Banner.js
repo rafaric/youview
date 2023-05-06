@@ -4,16 +4,16 @@ import { useContext } from "react";
 import { VideoContext } from "../../Contexts/VideoContexts";
 
 const Main = styled.section`
-  width: 100%;
+  width: 100vw;
   heigth: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  opacity: 0.8;
+  margin-top: 0.5rem;
 `;
 const Content = styled.div`
-  width: 100vw;
+  width: 90%;
   position: relative;
+  display: flex;
+  justify-content: center;
   @media (min-width: 768px) {
     width: 100vw;
     height: 30%;
@@ -21,16 +21,20 @@ const Content = styled.div`
 `;
 const Parrafo = styled.p`
   position: absolute;
-  bottom: 30%;
+  width: 90%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  font-size: 3.5rem;
+  text-align: center;
+  font-size: 3rem;
   text-shadow: 2px 4px 3px black;
+  background-color: rgba(0, 0, 0, 0.9);
 `;
 
 const Imagen = styled.img`
   border-radius: 0 0 10px 10px;
+  width: 90%;
   opacity: 0.8;
   &:hover {
     opacity: 1;
@@ -50,6 +54,8 @@ const Banner = ({ clave }) => {
           <>
             <Imagen
               width="100%"
+              height="500vh"
+              sty
               src={videos[Math.floor(rand)].limagen}
               alt={`imagen de ${clave}`}
             />

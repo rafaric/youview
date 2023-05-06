@@ -6,11 +6,12 @@ import { useMediaQuery } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
 const Head = styled.header`
-  width: 99vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #000088;
+
   @media (min-width: 1024px) {
     justify-content: ${(props) =>
       props.loc.pathname === "/" && "space-between"};

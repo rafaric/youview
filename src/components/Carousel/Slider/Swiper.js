@@ -40,13 +40,12 @@ export const Swiper = ({ datos, categoria }) => {
         },
       }}
       modules={[Pagination]}
-      key={categoria.index}
     >
       {datos.length > 0 &&
         datos.map((data) => {
           if (data.categoria === categoria) {
             return (
-              <SwiperSlide key={data.id}>
+              <SwiperSlide style={{ borderRadius: "10px" }} key={data.id}>
                 <VideoCard
                   dato={data.lvideo}
                   image={data.limagen}

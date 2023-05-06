@@ -9,7 +9,7 @@ const SectionContenedor = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
+  padding: 0 2rem;
   marging: 0;
   width: 100vw;
 `;

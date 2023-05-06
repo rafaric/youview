@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Campo from "../../../components/Campo/Campo";
 import Layout from "../../../components/Layout/Layout";
-import { FormGroup, Stack } from "@mui/material";
+import { FormGroup, Stack, useMediaQuery } from "@mui/material";
 import Button from "../../../components/Button/Button";
 import "./video.css";
 import styled from "styled-components";
@@ -248,7 +248,7 @@ const Video = () => {
   const actualizarvideo = (valor, id) => {
     setNuevoVideo({ ...nuevoVideo, [id]: valor });
   };
-
+  const matches = useMediaQuery("(min-width:1024px)");
   return (
     <Layout>
       {modal && (
@@ -285,10 +285,38 @@ const Video = () => {
               categorias={categorias}
             />
           ))}
-
-          <button className="send" type="submit">
-            Enviar
-          </button>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
+            <div style={{ gap: "1rem", width: "40%", display: "flex" }}>
+              <Button
+                texto="Enviar"
+                estilo="blue-short"
+                className="send"
+                type="submit"
+              >
+                Enviar
+              </Button>
+              {matches ? (
+                <Button texto="Limpiar" estilo="blue-short" color="gray">
+                  Limpiar
+                </Button>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div>
+              <Button
+                onclick="/newcat"
+                texto="Agregar Categoria"
+                estilo="blue-long"
+              ></Button>
+            </div>
+          </div>
         </Stack>
       </form>
     </Layout>

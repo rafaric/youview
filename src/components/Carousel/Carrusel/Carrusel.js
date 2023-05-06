@@ -12,20 +12,24 @@ const Titulo = styled.h2`
   color: white;
 `;
 const Conteiner = styled.div`
-  width: 70vw;
+  width: 85vw;
+  margin-top: 2rem;
   padding: 1rem 1rem;
+`;
+const Card = styled.div`
+  padding-top: 2rem;
 `;
 
 const Carrusel = ({ datos, categorias }) => {
-  console.log(datos);
+  console.log(categorias);
   return (
     <Conteiner>
       {categorias.map((categoria, i) => (
-        <div key={i}>
+        <Card key={i}>
           <Titulo color={categoria.color}>{categoria.nombre}</Titulo>
           <h3>{`Formación ${categoria.nombre} de Alura`}</h3>
           <Swiper datos={datos} categoria={categoria.nombre} />
-        </div>
+        </Card>
       ))}
     </Conteiner>
   );
