@@ -6,8 +6,7 @@ import {
   Stack,
 } from "@mui/material";
 import TextField from "@mui/material/TextField";
-import React, { useState } from "react";
-import styled from "styled-components";
+import React from "react";
 
 const Campo = ({
   id,
@@ -19,6 +18,7 @@ const Campo = ({
   valor,
   actualizavalor,
   categorias,
+  defaulty,
   type,
 }) => {
   const manejarCambio = (e) => {
@@ -38,7 +38,7 @@ const Campo = ({
           placeholder={placeholder}
           onBlur={onchange}
           helperText={helpertext}
-          defaultValue={""}
+          defaultValue={defaulty}
           value={valor}
           onChange={manejarCambio}
           multiline={id === "descripcion"}

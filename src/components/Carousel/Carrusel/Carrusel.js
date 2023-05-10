@@ -24,10 +24,10 @@ const Carrusel = ({ datos, categorias }) => {
   console.log(categorias);
   return (
     <Conteiner>
-      {categorias.map((categoria, i) => (
-        <Card key={i}>
+      {categorias.map((categoria) => (
+        <Card key={categoria.id}>
           <Titulo color={categoria.color}>{categoria.nombre}</Titulo>
-          <h3>{`Formación ${categoria.nombre} de Alura`}</h3>
+          <h3>{categoria.descripcion}</h3>
           <Swiper datos={datos} categoria={categoria.nombre} />
         </Card>
       ))}

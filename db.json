@@ -72,6 +72,8 @@
     {
       "nombre": "Back-End",
       "color": "#00C86F",
+      "descripcion": "videos para git desde alura latam",
+      "usuario": "rafaric",
       "id": 2
     },
     {
@@ -88,13 +90,6 @@
       "nombre": "Soft Skills",
       "color": "#6B5BE2",
       "id": 5
-    },
-    {
-      "nombre": "Chat Gpt",
-      "color": "#103d15",
-      "descripcion": "nzkdkfknndhbd",
-      "usuario": "rafaric",
-      "id": 6
     }
   ]
 }

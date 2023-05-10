@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { register } from "swiper/element/bundle";
 import VideoCard from "../VideoCard/VideoCard";
 import { Swiper as Swip, SwiperSlide } from "swiper/react";
@@ -6,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Pagination, Navigation } from "swiper";
+import { Pagination } from "swiper";
 
 register();
 

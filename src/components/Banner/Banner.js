@@ -5,6 +5,8 @@ import { VideoContext } from "../../Contexts/VideoContexts";
 
 const Main = styled.section`
   width: 100vw;
+  display: flex;
+  justify-content: center;
   heigth: 50vh;
   opacity: 0.8;
   margin-top: 0.5rem;

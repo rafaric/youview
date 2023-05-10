@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Campo from "../../../components/Campo/Campo";
 import Layout from "../../../components/Layout/Layout";
-import { FormGroup, Stack, useMediaQuery } from "@mui/material";
+import { Stack, useMediaQuery } from "@mui/material";
 import Button from "../../../components/Button/Button";
 import "./video.css";
 import styled from "styled-components";

@@ -1,0 +1,11 @@
+.editar:hover {
+  background-color: rgb(60, 60, 238);
+  transition: all ease-in-out .6s;
+  color: aliceblue
+}
+
+.eliminar:hover {
+  background-color: rgb(238, 60, 60);
+  transition: all ease-in-out .6s;
+  color: aliceblue
+}

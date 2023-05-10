@@ -1,6 +1,5 @@
 import { createContext, useEffect } from "react";
 import { useState } from "react";
-import { createClient } from "pexels";
 
 export const VideoContext = createContext();
 
