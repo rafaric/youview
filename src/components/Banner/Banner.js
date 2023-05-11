@@ -48,7 +48,7 @@ const Banner = ({ clave }) => {
   const min = 1;
   const max = videos.length;
   const rand = min + Math.random() * (max - min);
-  console.log(videos);
+
   return (
     <Main>
       <Content>

@@ -21,6 +21,7 @@
     "react-slick": "^0.29.0",
     "styled-components": "^6.0.0-rc.1",
     "swiper": "^9.2.4",
+    "uuid": "^9.0.0",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.19"
   },

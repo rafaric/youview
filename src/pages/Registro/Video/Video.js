@@ -4,6 +4,7 @@ import Layout from "../../../components/Layout/Layout";
 import { Stack, useMediaQuery } from "@mui/material";
 import Button from "../../../components/Button/Button";
 import "./video.css";
+
 import styled from "styled-components";
 import { useContext } from "react";
 import { VideoContext } from "../../../Contexts/VideoContexts";
@@ -47,7 +48,7 @@ const Video = () => {
       mensaje: "",
     },
   });
-  const { categorias } = useContext(VideoContext);
+  const { categorias, videos } = useContext(VideoContext);
 
   const [nuevoVideo, setNuevoVideo] = useState({
     titulo: "",
@@ -183,21 +184,14 @@ const Video = () => {
         return;
       }
     }
-
-    fetch("https://youview-c7790-default-rtdb.firebaseio.com/data.json", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(nuevoVideo),
-    }).then((response) => {
-      console.log(response);
-      setModal(true);
-      Array.from(document.querySelectorAll("input")).forEach(
-        (input) => (input.value = "")
-      );
-      Array.from(document.querySelectorAll("textarea")).forEach(
-        (input) => (input.value = "")
-      );
-    });
+    localStorage.setItem("videos", JSON.stringify([...videos, nuevoVideo]));
+    setModal(true);
+    Array.from(document.querySelectorAll("input")).forEach(
+      (input) => (input.value = "")
+    );
+    Array.from(document.querySelectorAll("textarea")).forEach(
+      (input) => (input.value = "")
+    );
   }
 
   const campos = [
@@ -260,7 +254,7 @@ const Video = () => {
         style={{
           width: "90%",
           justifyContent: "center",
-          height: "100vh",
+          paddingBottom: "2rem",
         }}
         onSubmit={handleSubmit}
       >

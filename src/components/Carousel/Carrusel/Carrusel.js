@@ -21,7 +21,6 @@ const Card = styled.div`
 `;
 
 const Carrusel = ({ datos, categorias }) => {
-  console.log(categorias);
   return (
     <Conteiner>
       {categorias.map((categoria) => (
