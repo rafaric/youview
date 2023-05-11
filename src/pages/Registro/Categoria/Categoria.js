@@ -26,19 +26,24 @@ const Categoria = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
 
   const fetchCategorias = async () => {
-    const response = await fetch("http://localhost:5000/categorias");
+    const response = await fetch(
+      "https://youview-c7790-default-rtdb.firebaseio.com/categorias.json"
+    );
     const data = await response.json();
     setCategorias(data);
   };
 
   const addCategoria = async (categoria) => {
-    const response = await fetch("http://localhost:5000/categorias", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(categoria),
-    });
+    const response = await fetch(
+      "https://youview-c7790-default-rtdb.firebaseio.com/categorias.json",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(categoria),
+      }
+    );
     await response.json();
     await fetchCategorias();
   };
@@ -46,7 +51,7 @@ const Categoria = () => {
   const updateCategoria = async (categoria) => {
     console.log(categoria);
     const response = await fetch(
-      `http://localhost:5000/categorias/${categoria.id}`,
+      `https://youview-c7790-default-rtdb.firebaseio.com/categorias/${categoria.id}.json`,
       {
         method: "PUT",
         headers: {
@@ -60,9 +65,12 @@ const Categoria = () => {
   };
 
   const deleteCategoria = async (id) => {
-    const response = await fetch(`http://localhost:5000/categorias/${id}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(
+      `https://youview-c7790-default-rtdb.firebaseio.com/categorias/${id}.json`,
+      {
+        method: "DELETE",
+      }
+    );
     await response.json();
     await fetchCategorias();
   };

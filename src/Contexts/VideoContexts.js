@@ -17,7 +17,7 @@ export const VideoContextProvider = ({ children }) => {
       .search({ query, size: "small", per_page: 10 })
       .then((videos) => setVideos(videos.videos)); */
 
-    fetch("http://localhost:5000/data", {
+    fetch("https://youview-c7790-default-rtdb.firebaseio.com/data.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -25,9 +25,11 @@ export const VideoContextProvider = ({ children }) => {
     })
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
+
         setVideos(data);
       });
-    fetch("http://localhost:5000/categorias", {
+    fetch("https://youview-c7790-default-rtdb.firebaseio.com/categorias.json", {
       headers: {
         "content-type": "application/json",
       },
